@@ -2,15 +2,20 @@ import React from 'react';
 import { FontAwesome5 as Icon } from '@expo/vector-icons';
 import { Text, StyleSheet, View, Image } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
+import Header from '../../components/Header';
+import { useNavigation } from '@react-navigation/native';
 
 const Home = () => {
 
-    const handleOnPress = () => {
+    const navigation = useNavigation();
 
+    const handleOnPress = () => {
+      navigation.navigate('CreateRecord')
     }
 
     return (
         <>
+            <Header />
             <View style={styles.container}>
                 <Image 
                     source={require('../../assets/gamer.png')}
@@ -37,7 +42,7 @@ const Home = () => {
 
 const styles = StyleSheet.create({
     container: {
-      marginTop:  '15%',
+      marginTop:  '5%',
       backgroundColor: '#0B1F34',
       alignItems: 'center',
     },
@@ -49,7 +54,7 @@ const styles = StyleSheet.create({
       color: '#00D4FF',
       fontSize: 36,
       fontWeight: 'bold',
-      marginTop: 31,
+      marginTop: 25,
       fontFamily: "Play_700Bold",
     },
     subTitle: {
