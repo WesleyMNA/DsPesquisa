@@ -71,7 +71,7 @@ const Charts = () => {
                         <Chart 
                             options={{ ...pieOptions, labels: platformData?.labels  }}
                             type="donut"
-                            series={[platformData?.series]}
+                            series={platformData?.series}
                             width="350"
                         />
                     </div>
